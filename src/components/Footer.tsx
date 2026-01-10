@@ -5,11 +5,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="relative border-t border-white/10">
+      {/* Gradient line at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      
       <div className="container-narrow mx-auto px-4 py-12">
         <div className="flex flex-col items-center gap-8">
           {/* Logo */}
-          <a href="#home" className="font-display text-2xl font-bold text-primary">
+          <a href="#home" className="font-display text-2xl font-bold text-gradient">
             Portfolio
           </a>
 

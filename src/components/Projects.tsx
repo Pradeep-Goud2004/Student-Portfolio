@@ -9,6 +9,7 @@ const projects = [
     github: 'https://github.com',
     live: 'https://example.com',
     featured: true,
+    gradient: 'from-primary/20 to-cyan-500/20',
   },
   {
     title: 'Weather Dashboard',
@@ -17,6 +18,7 @@ const projects = [
     github: 'https://github.com',
     live: 'https://example.com',
     featured: true,
+    gradient: 'from-accent/20 to-pink-500/20',
   },
   {
     title: 'Task Management App',
@@ -25,6 +27,7 @@ const projects = [
     github: 'https://github.com',
     live: 'https://example.com',
     featured: true,
+    gradient: 'from-purple-500/20 to-violet-500/20',
   },
   {
     title: 'Algorithm Visualizer',
@@ -54,33 +57,37 @@ const Projects = () => {
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="section-padding bg-card">
-      <div className="container-narrow mx-auto">
+    <section id="projects" className="section-padding relative">
+      {/* Background orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px]" />
+      
+      <div className="container-narrow mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="text-accent font-medium text-sm uppercase tracking-wider">My Work</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-            Featured Projects
+          <span className="text-primary font-medium text-sm uppercase tracking-widest">My Work</span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3">
+            Featured <span className="text-gradient">Projects</span>
           </h2>
         </div>
 
         {/* Featured Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {featuredProjects.map((project) => (
+          {featuredProjects.map((project, idx) => (
             <div
               key={project.title}
-              className="group bg-background rounded-2xl border border-border overflow-hidden shadow-soft card-hover"
+              className="group glass rounded-3xl overflow-hidden card-hover"
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
               {/* Project Image Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
+              <div className={`aspect-video bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Folder className="w-16 h-16 text-primary/30" />
+                  <Folder className="w-16 h-16 text-white/30" />
                 </div>
-                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-primary-foreground rounded-full text-primary hover:scale-110 transition-transform"
+                    className="p-3 glass-strong rounded-full text-white hover:scale-110 transition-transform"
                   >
                     <Github size={20} />
                   </a>
@@ -89,7 +96,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-primary-foreground rounded-full text-primary hover:scale-110 transition-transform"
+                      className="p-3 glass-strong rounded-full text-white hover:scale-110 transition-transform"
                     >
                       <ExternalLink size={20} />
                     </a>
@@ -108,7 +115,7 @@ const Projects = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-md font-medium"
+                      className="px-2 py-1 bg-white/5 text-foreground/60 text-xs rounded-lg font-medium"
                     >
                       {tech}
                     </span>
@@ -127,10 +134,10 @@ const Projects = () => {
           {otherProjects.map((project) => (
             <div
               key={project.title}
-              className="p-5 bg-background rounded-xl border border-border hover:border-accent/50 transition-colors"
+              className="glass-light rounded-2xl p-5 hover:border-primary/30 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-3">
-                <Folder className="w-8 h-8 text-accent" />
+                <Folder className="w-8 h-8 text-primary" />
                 <a
                   href={project.github}
                   target="_blank"
@@ -144,7 +151,7 @@ const Projects = () => {
               <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tech.slice(0, 3).map((tech) => (
-                  <span key={tech} className="text-xs text-muted-foreground">
+                  <span key={tech} className="text-xs text-primary/80">
                     {tech}
                   </span>
                 ))}
@@ -156,9 +163,8 @@ const Projects = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <Button
-            variant="outline"
             size="lg"
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="glass border-primary/30 text-foreground hover:bg-primary/10 rounded-full px-8"
             asChild
           >
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
