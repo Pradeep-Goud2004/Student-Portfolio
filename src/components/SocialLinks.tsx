@@ -34,7 +34,7 @@ interface SocialLinksProps {
 
 const SocialLinks = ({ variant = 'default' }: SocialLinksProps) => {
   return (
-    <div className="flex items-center justify-center gap-4">
+    <div className="flex items-center justify-center gap-3">
       {socialLinks.map((social) => (
         <a
           key={social.name}
@@ -43,8 +43,8 @@ const SocialLinks = ({ variant = 'default' }: SocialLinksProps) => {
           rel="noopener noreferrer"
           className={`p-3 rounded-full transition-all duration-300 ${
             variant === 'footer'
-              ? 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'
-              : 'bg-card border border-border text-muted-foreground hover:text-accent hover:border-accent hover:shadow-card'
+              ? 'glass-light text-foreground/70 hover:text-primary hover:glow-primary'
+              : 'glass text-foreground/70 hover:text-primary hover:scale-110 hover:glow-primary'
           }`}
           aria-label={social.name}
         >

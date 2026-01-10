@@ -4,7 +4,6 @@ import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   const handleDownloadResume = () => {
-    // Create a sample resume download
     const link = document.createElement('a');
     link.href = '/resume.pdf';
     link.download = 'Student_Resume.pdf';
@@ -13,30 +12,31 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-highlight/10 rounded-full blur-3xl" />
+      {/* Animated gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-orb" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[100px] animate-orb" style={{ animationDelay: '-4s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[150px]" />
       
       <div className="container-narrow mx-auto px-4 py-20 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in-up">
-            <Sparkles size={16} className="text-accent" />
-            <span className="text-sm font-medium text-muted-foreground">Open to Opportunities</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-light mb-8 animate-fade-in-up">
+            <Sparkles size={16} className="text-primary" />
+            <span className="text-sm font-medium text-foreground/80">Open to Opportunities</span>
           </div>
 
           {/* Main heading */}
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            Hi, I'm <span className="text-gradient">Your Name</span>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            Hi, I'm <span className="text-gradient text-glow">Your Name</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-primary font-medium mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Computer Science Student & Aspiring Developer
           </p>
 
           {/* Description */}
-          <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
             Passionate about creating innovative solutions and learning new technologies. 
             Currently pursuing my degree while building projects that make a difference.
           </p>
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold shadow-card hover:shadow-elevated transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground px-8 py-6 text-base font-semibold rounded-full glow-primary transition-all duration-300 hover:scale-105"
               onClick={handleDownloadResume}
             >
               <Download size={18} className="mr-2" />
@@ -54,7 +54,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-base font-semibold transition-all duration-300"
+              className="glass border-white/20 text-foreground hover:bg-white/10 px-8 py-6 text-base font-semibold rounded-full transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="#contact">Get in Touch</a>
