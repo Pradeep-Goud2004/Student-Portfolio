@@ -80,20 +80,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Additional Skills Tags */}
-        <div className="mt-12 text-center">
-          <h4 className="text-sm font-medium text-muted-foreground mb-4">Also familiar with:</h4>
-          <div className="flex flex-wrap justify-center gap-3">
-            {['REST APIs', 'GraphQL', 'Firebase', 'AWS', 'Agile', 'CI/CD', 'Testing', 'UI/UX'].map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 glass-light rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:border-primary/30 transition-all cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
