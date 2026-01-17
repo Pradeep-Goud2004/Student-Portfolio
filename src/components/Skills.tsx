@@ -6,8 +6,6 @@ const skillCategories = [
       { name: 'HTML/CSS', level: 90 },
       { name: 'JavaScript', level: 85 },
       { name: 'React', level: 80 },
-      { name: 'TypeScript', level: 75 },
-      { name: 'Tailwind CSS', level: 85 },
     ],
   },
   {
@@ -27,9 +25,6 @@ const skillCategories = [
     skills: [
       { name: 'Git/GitHub', level: 85 },
       { name: 'VS Code', level: 90 },
-      { name: 'Figma', level: 70 },
-      { name: 'Docker', level: 55 },
-      { name: 'Linux', level: 65 },
     ],
   },
 ];
