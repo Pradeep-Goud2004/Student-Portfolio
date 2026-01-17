@@ -1,4 +1,5 @@
 import { BookOpen, Code, GraduationCap } from 'lucide-react';
+import profileImage from '@/assets/profile.jpg';
 
 const highlights = [
   { icon: GraduationCap, label: 'Year', value: '3rd Year', color: 'text-primary' },
@@ -28,8 +29,12 @@ const About = () => {
               
               {/* Glass container */}
               <div className="relative glass rounded-3xl overflow-hidden p-2">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-9xl animate-float">👨‍🎓</span>
+                <div className="aspect-square rounded-2xl overflow-hidden">
+                  <img 
+                    src={profileImage} 
+                    alt="Profile" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
