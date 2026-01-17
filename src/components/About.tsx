@@ -1,10 +1,8 @@
-import { BookOpen, Code, Coffee, GraduationCap } from 'lucide-react';
+import { BookOpen, Code, GraduationCap } from 'lucide-react';
 
 const highlights = [
   { icon: GraduationCap, label: 'Year', value: '3rd Year', color: 'text-primary' },
   { icon: BookOpen, label: 'Major', value: 'Computer Science', color: 'text-accent' },
-  { icon: Code, label: 'Projects', value: '15+', color: 'text-purple-400' },
-  { icon: Coffee, label: 'Coffee Cups', value: '∞', color: 'text-orange-400' },
 ];
 
 const About = () => {
@@ -68,7 +66,7 @@ const About = () => {
             </div>
 
             {/* Highlights Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+            <div className="grid grid-cols-2 gap-3 mt-8">
               {highlights.map((item) => (
                 <div
                   key={item.label}
