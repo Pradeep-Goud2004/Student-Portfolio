@@ -38,9 +38,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: MapPin, label: 'Location', value: 'San Francisco, CA' },
-    { icon: Mail, label: 'Email', value: 'student@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567' },
+    { icon: MapPin, label: 'Location', value: 'Kurnool' },
+    { icon: Mail, label: 'Email', value: 'pk9621535@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '6300506324' },
   ];
 
   return (
@@ -103,7 +103,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder=""
                     required
                     className="glass-light border-white/10 bg-transparent text-foreground placeholder:text-muted-foreground focus:border-primary/50 rounded-xl"
                   />
@@ -118,7 +118,7 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder=""
                     required
                     className="glass-light border-white/10 bg-transparent text-foreground placeholder:text-muted-foreground focus:border-primary/50 rounded-xl"
                   />
@@ -134,7 +134,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="How can I help you?"
+                  placeholder=""
                   required
                   className="glass-light border-white/10 bg-transparent text-foreground placeholder:text-muted-foreground focus:border-primary/50 rounded-xl"
                 />
