@@ -32,7 +32,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-primary font-medium mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Graduate in the 3rd year & Aspiring Developer
+            Aspiring Developer
           </p>
 
           {/* Description */}
