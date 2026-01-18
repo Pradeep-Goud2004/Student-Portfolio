@@ -35,7 +35,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center text-sm text-muted-foreground">
             <p className="flex items-center justify-center gap-1">
-              Made with <Heart size={14} className="text-accent fill-accent" /> by Your Name
+              Made with <Heart size={14} className="text-accent fill-accent" /> by Pradeep Kumar
             </p>
             <p className="mt-1">© {currentYear} All rights reserved.</p>
           </div>
