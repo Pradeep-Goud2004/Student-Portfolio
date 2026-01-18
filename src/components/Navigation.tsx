@@ -5,7 +5,7 @@ const navLinks = [
   { href: '#home', label: 'Home', external: false },
   { href: '#about', label: 'About', external: false },
   { href: '#skills', label: 'Skills', external: false },
-  { href: 'https://github.com/pradeepkumar', label: 'Projects', external: true },
+  { href: '#projects', label: 'Projects', external: false },
   { href: '#contact', label: 'Contact', external: false },
 ];
 
