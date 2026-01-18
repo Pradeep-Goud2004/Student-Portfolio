@@ -2,7 +2,7 @@ import { BookOpen, Code, GraduationCap } from 'lucide-react';
 import profileImage from '@/assets/profile.jpg';
 
 const highlights = [
-  { icon: GraduationCap, label: 'Year', value: '3rd Year', color: 'text-primary' },
+  { icon: GraduationCap, label: 'Year', value: 'Graduate', color: 'text-primary' },
   { icon: BookOpen, label: 'Major', value: 'Computer Science', color: 'text-accent' },
 ];
 
