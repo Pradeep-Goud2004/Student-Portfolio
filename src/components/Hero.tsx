@@ -27,12 +27,12 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            Hi, I'm <span className="text-gradient text-glow">Your Name</span>
+            Hi, I'm <span className="text-gradient text-glow">Pradeep Kumar</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-primary font-medium mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Computer Science Student & Aspiring Developer
+            Graduate in the 3rd year & Aspiring Developer
           </p>
 
           {/* Description */}
