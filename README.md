@@ -2,6 +2,8 @@
 
 ## Project info
 
+**Live Demo**: https://students-portfolio-project.lovable.app
+
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
 ## How can I edit this code?
